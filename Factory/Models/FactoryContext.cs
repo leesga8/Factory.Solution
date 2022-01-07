@@ -1,11 +1,18 @@
+using Microsoft.EntityFrameworkCore;
+
 namespace Factory.Models
 {
-  public class EngineerMachine
-    {       
-        public int EngineerMachined { get; set; }
-        public int EngineerId { get; set; }
-        public int MachineId { get; set; }
-        public virtual Machine Machine { get; set; }
-        public virtual Engineer Engineer { get; set; }
+  public class FactoryContext : DbContext
+  {
+    public DbSet<Machine> Machines { get; set; }
+    public DbSet<Engineer> Engineers { get; set; }
+    public DbSet<EngineerMachine> EngineerMachine { get; set; }
+
+    public FactoryContext(DbContextOptions options) : base(options) { }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+      optionsBuilder.UseLazyLoadingProxies();
     }
+  }
 }
