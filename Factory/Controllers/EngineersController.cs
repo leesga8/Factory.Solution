@@ -24,9 +24,9 @@ namespace Factory
     public ActionResult Details(int id)
     {
       var thisEngineer = _db.Engineers
-          .Include(Engineer => Engineer.JoinEntities)
+          .Include(engineer => engineer.JoinEntities)
           .ThenInclude(join => join.Machine)
-          .FirstOrDefault(Engineer => Engineer.EngineerId == id);
+          .FirstOrDefault(engineer => engineer.EngineerId == id);
       return View(thisEngineer);
     }
 
