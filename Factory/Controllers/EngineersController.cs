@@ -21,7 +21,14 @@ namespace Factory
       return View(_db.Engineers.ToList());
     }
 
-
+    public ActionResult Details(int id)
+    {
+      var thisEngineer = _db.Engineers
+          .Include(Engineer => Engineer.JoinEntities)
+          .ThenInclude(join => join.Machine)
+          .FirstOrDefault(Engineer => Engineer.EngineerId == id);
+      return View(thisEngineer);
+    }
 
   }
 }
