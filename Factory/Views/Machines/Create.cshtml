@@ -1,0 +1,15 @@
+@model Factory.Models.Machine
+
+<h4>Add a new Machine</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name, new{ required = "required" })
+    @Html.TextBoxFor(model => model.Name, new{ required = "required" })
+
+    @Html.LabelFor(model => model.InspectionDate)
+    @Html.TextBoxFor(model => model.InspectionDate, "{0:yyyy-MM-dd}", new { @placeholder = "YYYY-MM-DD" })
+
+    <input type="submit" value="Add new machine" class="btn btn-default" />
+}
+<p>@Html.ActionLink("Show all machines", "Index")</p>
