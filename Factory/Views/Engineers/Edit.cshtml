@@ -1,0 +1,26 @@
+@model Factory.Models.Engineer
+
+<h2>Edit</h2>
+
+<h4>Edit this engineer: @Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.EngineerId)
+
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
+
+    @Html.LabelFor(model => model.LicenseDate)
+    @Html.TextBoxFor(model => model.LicenseDate, "{0:yyyy-MM-dd}", new { @placeholder = "YYYY-MM-DD" })
+
+    @Html.LabelFor(model => model.Repairs)
+    @Html.CheckBoxFor(model => model.Repairs)
+
+    @Html.Label("Select machine")
+    @Html.DropDownList("MachineId")
+
+    <input type="submit" value="Save" />
+}
+
+<p>@Html.ActionLink("Back to list", "Index")</p>

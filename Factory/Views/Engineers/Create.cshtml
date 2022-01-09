@@ -8,7 +8,7 @@
     @Html.TextBoxFor(model => model.Name, new{ required = "required" })
 
     @Html.LabelFor(model => model.LicenseDate)
-    @Html.TextBoxFor(model => model.LicenseDate, "{0:yyyy-MM-dd}")
+    @Html.TextBoxFor(model => model.LicenseDate, "{0:yyyy-MM-dd}", new { @placeholder = "YYYY-MM-DD" })
 
     @Html.LabelFor(model => model.Repairs, new{ required = "required" })
     @Html.CheckBoxFor(model => model.Repairs, new{ required = "required" })
