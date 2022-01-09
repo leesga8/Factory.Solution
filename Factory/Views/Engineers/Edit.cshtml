@@ -1,8 +1,8 @@
 @model Factory.Models.Engineer
 
-<h2>Edit</h2>
+<h2>Edit an Engineer</h2>
 
-<h4>Edit this engineer: @Html.DisplayFor(model => model.Name)</h4>
+<h4>Editing: @Html.DisplayFor(model => model.Name)</h4>
 
 @using (Html.BeginForm())
 {
@@ -11,14 +11,14 @@
     @Html.LabelFor(model => model.Name)
     @Html.TextBoxFor(model => model.Name)
 
-    @Html.LabelFor(model => model.LicenseDate)
-    @Html.TextBoxFor(model => model.LicenseDate, "{0:yyyy-MM-dd}", new { @placeholder = "YYYY-MM-DD" })
+    <p>@Html.LabelFor(model => model.LicenseDate)
+    @Html.TextBoxFor(model => model.LicenseDate, "{0:yyyy-MM-dd}", new { @placeholder = "YYYY-MM-DD" })</p>
 
-    @Html.LabelFor(model => model.Repairs)
-    @Html.CheckBoxFor(model => model.Repairs)
+    <p>@Html.LabelFor(model => model.Repairs)
+    @Html.CheckBoxFor(model => model.Repairs)</p>
 
-    @Html.Label("Select machine")
-    @Html.DropDownList("MachineId")
+    <p>@Html.Label("Select machine")
+    @Html.DropDownList("MachineId")</p>
 
     <input type="submit" value="Save" />
 }

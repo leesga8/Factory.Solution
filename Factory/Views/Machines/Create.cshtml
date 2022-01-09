@@ -4,12 +4,12 @@
 
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.Name, new{ required = "required" })
-    @Html.TextBoxFor(model => model.Name, new{ required = "required" })
+    <p>@Html.LabelFor(model => model.Name, new{ required = "required" })
+    @Html.TextBoxFor(model => model.Name, new{ required = "required" })</p>
 
-    @Html.LabelFor(model => model.InspectionDate)
-    @Html.TextBoxFor(model => model.InspectionDate, "{0:yyyy-MM-dd}", new { @placeholder = "YYYY-MM-DD" })
+    <p>@Html.LabelFor(model => model.InspectionDate)
+    @Html.TextBoxFor(model => model.InspectionDate, "{0:yyyy-MM-dd}", new { @placeholder = "YYYY-MM-DD" })</p>
 
     <input type="submit" value="Add new machine" class="btn btn-default" />
 }
-<p>@Html.ActionLink("Show all machines", "Index")</p>
+<p>@Html.ActionLink("List of Machines", "Index")</p>

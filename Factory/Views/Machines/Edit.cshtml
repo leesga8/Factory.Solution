@@ -1,18 +1,18 @@
 @model Factory.Models.Machine
 
-<h2>Edit</h2>
+<h2>Edit a Machine</h2>
 
-<h4>Edit this machine: @Html.DisplayFor(model => model.Name)</h4>
+<h4>Editing: @Html.DisplayFor(model => model.Name)</h4>
 
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.MachineId)
 
-  @Html.LabelFor(model => model.Name)
-  @Html.EditorFor(model => model.Name)
+  <p>@Html.LabelFor(model => model.Name)
+  @Html.EditorFor(model => model.Name)</p>
 
-  @Html.LabelFor(model => model.InspectionDate)
-  @Html.TextBoxFor(model => model.InspectionDate, "{0:yyyy-MM-dd}", new { @placeholder = "YYYY-MM-DD" })
+  <p>@Html.LabelFor(model => model.InspectionDate)
+  @Html.TextBoxFor(model => model.InspectionDate, "{0:yyyy-MM-dd}", new { @placeholder = "YYYY-MM-DD" })</p>
 
   <input type="submit" value="Save" />
 }

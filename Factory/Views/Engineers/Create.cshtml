@@ -4,18 +4,18 @@
 
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.Name, new{ required = "required" })
-    @Html.TextBoxFor(model => model.Name, new{ required = "required" })
+    <p>@Html.LabelFor(model => model.Name, new{ required = "required" })
+    @Html.TextBoxFor(model => model.Name, new{ required = "required" })</p>
 
-    @Html.LabelFor(model => model.LicenseDate)
-    @Html.TextBoxFor(model => model.LicenseDate, "{0:yyyy-MM-dd}", new { @placeholder = "YYYY-MM-DD" })
+    <p>@Html.LabelFor(model => model.LicenseDate)
+    @Html.TextBoxFor(model => model.LicenseDate, "{0:yyyy-MM-dd}", new { @placeholder = "YYYY-MM-DD" })</p>
 
-    @Html.LabelFor(model => model.Repairs, new{ required = "required" })
-    @Html.CheckBoxFor(model => model.Repairs, new{ required = "required" })
+    <p>@Html.LabelFor(model => model.Repairs, new{ required = "required" })
+    @Html.CheckBoxFor(model => model.Repairs, new{ required = "required" })</p>
 
-    @Html.Label("Select machine")
-    @Html.DropDownList("MachineId")
+    <p>@Html.Label("Select machine")
+    @Html.DropDownList("MachineId")</p>
 
     <input type="submit" value="Add new engineer" class="btn btn-default" />
 }
-<p>@Html.ActionLink("Show all engineers", "Index")</p>
+<p>@Html.ActionLink("List of Engineers", "Index")</p>
