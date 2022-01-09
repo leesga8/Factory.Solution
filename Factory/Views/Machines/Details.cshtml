@@ -3,10 +3,11 @@
 <h2>Machine Details</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<h3>@Html.DisplayNameFor(model => model.InspectionDate): @Html.DisplayFor(model => model.InspectionDate)</h3>
 
 @if(@Model.JoinEntities.Count == 0)
 {
-  <p>This machine does not have any engineers.</p>
+  <p>This machine does not have any engineers</p>
 }
 else
 {
