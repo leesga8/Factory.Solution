@@ -30,5 +30,23 @@ namespace Factory
       return View(thisEngineer);
     }
 
+    public ActionResult Create()
+    {
+      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
+      return View();
+    }
+
+    [HttpPost]
+    public ActionResult Create(Engineer engineer, int MachineId)
+    {
+      _db.Engineers.Add(engineer);
+      _db.SaveChanges();
+      if (MachineId != 0)
+      {
+        _db.EngineerMachine.Add(new EngineerMachine() { MachineId = MachineId, EngineerId = engineer.EngineerId });
+      }
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }
