@@ -18,7 +18,7 @@
 
 This project is part of the Epicodus School, focusing on MVC framework and SQL databases. The user will be able to assign many engineers to a machine, and many machines to an engineer. The user can also see a list of engineers or machines, with full CRUD functionality. The data is displayed with Razor and HTML helpers. Databases will save data in an many-to-many relationship. 
 
-<img src="factory/wwwroot/img/database.png" height="300px">
+<img src="Factory/wwwroot/img/database.png" height="300px">
 
 ## Setup/Installation Requirements
 
