@@ -8,6 +8,7 @@
 * C#
 * ASP.NET Core MVC EF
 * MySQL, MySQL Workbench
+* Entity
 * dotnet script, REPL
 * Razor View Engine
 * NuGet
@@ -38,12 +39,13 @@ This project is part of the Epicodus School, focusing on MVC framework and SQL d
 ```
 
 ### Database Setup/Installation 
-* Downloadn and open MqSql Workbench and connect to localhost:3306
-* In the Navigator > Administration window, select Data Import/Restore
-* In Import Options select Import from Self-Contained File
-* Select albert_lee.sql
-* In `Import Progress` click `Start Import`
-* Run `dotnet build` and `dotnet run` in terminal
+* _Download and open MqSql Workbench and connect to localhost:3306_
+* _In the Navigator > Administration window, select Data Import/Restore_
+* _In Import Options select Import from Self-Contained File_
+* _Select albert_lee.sql_
+* _In 'Import Progress' click `Start Import`_
+* _In the terminal run `dotnet ef database update`_
+* _Run `dotnet restore` and `dotnet run` in terminal_
 
 ## Known Bugs
 
